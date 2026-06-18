@@ -24,6 +24,17 @@ function formatRupiah($number) {
                 <i data-lucide="washing-machine" size="36"></i>
                 FreshClean Laundry
             </div>
+            <nav class="nav-tabs">
+                <a href="<?= base_url('/') ?>" class="nav-tab nav-tab-active">
+                    <i data-lucide="layers" size="16"></i> Layanan
+                </a>
+                <a href="<?= base_url('orders') ?>" class="nav-tab">
+                    <i data-lucide="clipboard-list" size="16"></i> Pesanan
+                </a>
+                <a href="<?= base_url('orders/history') ?>" class="nav-tab">
+                    <i data-lucide="history" size="16"></i> Riwayat
+                </a>
+            </nav>
             <button class="btn btn-primary" onclick="openAddModal()">
                 <i data-lucide="plus" size="20"></i>
                 Tambah Layanan
@@ -46,6 +57,14 @@ function formatRupiah($number) {
                     <?= session()->getFlashdata('error') ?>
                 </div>
             <?php endif; ?>
+
+            <!-- Page Section Header -->
+            <div class="page-section-header">
+                <div>
+                    <h1 class="page-title">Kelola Layanan</h1>
+                    <p class="page-subtitle">Atur jenis layanan laundry yang tersedia</p>
+                </div>
+            </div>
 
             <!-- Services List -->
             <?php if (empty($services)): ?>
